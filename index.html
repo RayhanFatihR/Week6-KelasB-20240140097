@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pokédex - Daftar Pokémon</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- CSS khusus PokeDex -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JavaScript Fetch API yang sudah ada -->
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="poke-header">
+        <div class="container py-4">
+            <div class="d-flex justify-content-center align-items-center gap-3">
+                <div class="pokeball-logo" aria-hidden="true">
+                    <span></span>
+                </div>
+
+                <div>
+                    <h1 class="poke-title mb-1">POKÉDEX</h1>
+                    <p class="mb-0 text-white small">
+                        YOUR ULTIMATE POKÉMON GUIDE
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVIGASI -->
+    <nav class="navbar navbar-expand-sm poke-navbar">
+        <div class="container justify-content-center gap-2">
+            <a class="nav-link active" href="index.html">
+                ◎ Daftar Pokémon
+            </a>
+
+            <a class="nav-link" href="form.html">
+                ♟ Trainer Profile
+            </a>
+        </div>
+    </nav>
+
+    <!-- KONTEN UTAMA -->
+    <main class="container py-5">
+
+        <section class="poke-panel p-3 p-md-4">
+
+            <!-- JUDUL -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <span class="section-label">POKÉDEX DATABASE</span>
+                    <h2 class="fw-bold mt-2 mb-2">Jelajahi Pokémon!</h2>
+                    <p class="text-secondary mb-0">
+                        Temukan Pokémon favoritmu.
+                    </p>
+                </div>
+
+                <div class="mini-pokeball d-none d-sm-block"
+                     aria-hidden="true"></div>
+            </div>
+
+            <!-- PENCARIAN -->
+            <div class="row g-2 mb-4">
+                <div class="col-12 col-sm-8 col-md-6">
+                    <input
+                        type="text"
+                        id="searchInput"
+                        class="form-control poke-input"
+                        placeholder="Cari nama Pokémon..."
+                        aria-label="Cari nama Pokémon"
+                    >
+                </div>
+
+                <div class="col-12 col-sm-auto">
+                    <button
+                        type="button"
+                        id="reloadButton"
+                        class="btn btn-danger poke-button w-100"
+                    >
+                        ↻ Muat Ulang
+                    </button>
+                </div>
+            </div>
+
+            <!-- PESAN STATUS -->
+            <p id="loadingMessage" class="alert alert-info" role="status">
+                Memuat data Pokémon...
+            </p>
+
+            <p id="errorMessage" class="alert alert-danger" role="alert"></p>
+
+            <!-- DAFTAR POKÉMON DARI FETCH API -->
+            <div id="pokemonList" class="pokemon-grid"></div>
+
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="poke-footer text-center py-4">
+        <div class="footer-decoration mb-3" aria-hidden="true">
+            <span></span>
+            <div class="footer-pokeball"></div>
+            <span></span>
+        </div>
+
+        <p class="mb-0">
+            Pokédex Trainer System · PPAW Week 6
+        </p>
+    </footer>
+
+</body>
+</html>

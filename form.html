@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex - Trainer Profile</title>
+
+    <link rel="stylesheet" href="css/form.css">
+    <script src="js/form.js" defer></script>
+</head>
+<body>
+
+    <!-- Header Pokédex -->
+    <header class="pokedex-header">
+        <div class="header-content">
+            <div class="pokeball-logo">
+                <span></span>
+            </div>
+
+            <div>
+                <h1>POKÉDEX</h1>
+                <p>TRAINER REGISTRATION</p>
+            </div>
+
+            <div class="header-lights">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigasi -->
+    <nav>
+        <a href="index.html">
+            <span class="nav-icon">◉</span>
+            Daftar Pokémon
+        </a>
+
+        <a href="form.html">
+            <span class="nav-icon">♟</span>
+            Trainer Profile
+        </a>
+    </nav>
+
+    <!-- Konten utama -->
+    <main>
+        <section class="trainer-card">
+
+            <div class="card-label">
+                <span>◉</span>
+                TRAINER CARD
+            </div>
+
+            <h2>Create Your Trainer Profile</h2>
+
+            <form id="dataForm">
+
+                <label for="nama">Trainer Name</label>
+                <div class="input-wrapper">
+                    <span class="input-icon">♟</span>
+                    <input
+                        type="text"
+                        id="nama"
+                        name="nama"
+                        placeholder="Masukkan nama lengkap"
+                        required
+                    >
+                </div>
+
+                <label for="email">Email Address</label>
+                <div class="input-wrapper">
+                    <span class="input-icon">✉</span>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Masukkan email"
+                        required
+                    >
+                </div>
+
+                <label for="favorit">Favorite Pokémon</label>
+                <div class="input-wrapper">
+                    <span class="input-icon">◉</span>
+
+                    <select id="favorit" name="favorit" required>
+                        <option value="">Pilih Pokémon</option>
+                        <option value="Pikachu">Pikachu</option>
+                        <option value="Bulbasaur">Bulbasaur</option>
+                        <option value="Charmander">Charmander</option>
+                        <option value="Squirtle">Squirtle</option>
+                    </select>
+                </div>
+
+                <button type="submit">
+                    <span>◉</span>
+                    SAVE TRAINER PROFILE
+                </button>
+
+            </form>
+
+            <!-- Hasil formulir -->
+            <div id="result" aria-live="polite"></div>
+
+        </section>
+
+        <!-- Dekorasi Poké Ball -->
+        <div class="decoration decoration-left">◉</div>
+        <div class="decoration decoration-right">◉</div>
+    </main>
+
+    <footer>
+        <span class="footer-line"></span>
+        <span class="footer-pokeball">◉</span>
+        <span class="footer-line"></span>
+        <p>Pokédex Trainer System · PPAW Week 6</p>
+    </footer>
+
+</body>
+</html>
